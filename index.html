@@ -15,6 +15,8 @@
 .hero-signature{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .hero-signature strong{font-size:clamp(24px,3vw,42px);font-weight:800;letter-spacing:.06em;color:var(--gold);line-height:1}
 .hero-signature span{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
+
+.process-mapped{padding-top:40px;background:linear-gradient(180deg,#05070b 0%,#07101a 100%)}.mapped-card{margin-top:54px;border:1px solid var(--line);border-radius:34px;min-height:560px;background:linear-gradient(145deg,#09121e,#07101a);display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;overflow:hidden;position:relative}.mapped-card:before{content:"";position:absolute;inset:-25%;background:radial-gradient(circle at 22% 45%,rgba(203,168,106,.12),transparent 24%),radial-gradient(circle at 78% 45%,rgba(56,200,255,.13),transparent 28%);pointer-events:none}.mapped-copy{padding:58px 20px 58px 58px;position:relative;z-index:2}.mapped-copy h3{font-size:clamp(42px,5vw,72px);line-height:.98;letter-spacing:-.055em;margin:16px 0 22px}.mapped-copy p{font-size:17px;line-height:1.72;color:#aebbc9;max-width:620px}.mapped-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}.mapped-media{height:100%;min-height:560px;position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:38px 38px 38px 8px}.mapped-media img{width:100%;height:auto;max-height:500px;object-fit:contain;border-radius:22px;border:1px solid rgba(255,255,255,.10);box-shadow:0 35px 75px rgba(0,0,0,.48)}@media(max-width:900px){.mapped-card{grid-template-columns:1fr}.mapped-copy{padding:42px}.mapped-media{min-height:auto;padding:0 24px 32px}.mapped-media img{max-height:none}}
 </style>
 </head>
 <body>
@@ -37,6 +39,22 @@
   </div>
 </section>
 
+<section class="process-mapped" id="processos-mapeados">
+  <div class="section-tag">Processos Mapeados</div>
+  <h2 class="section-title">Do apontamento de horas à decisão de gestão.</h2>
+  <p class="section-copy">Mapear processos é transformar rotina operacional em informação clara, rastreável e pronta para decisão.</p>
+  <div class="mapped-card">
+    <div class="mapped-copy">
+      <div class="product-kicker">Controle de Banco de Horas</div>
+      <h3>Mais clareza sobre horas, saldos e compensações.</h3>
+      <p>Uma solução pensada para organizar o banco de horas dos colaboradores, consolidar saldos, visualizar compensações e apoiar decisões sobre horas a compensar ou pagar.</p>
+      <p>Em vez de controles espalhados e conferências manuais, o processo ganha uma visão única, mais simples de acompanhar e muito mais fácil de analisar.</p>
+      <div class="mapped-list"><span class="chip">Saldo por colaborador</span><span class="chip">Compensações</span><span class="chip">Horas a pagar</span><span class="chip">Gestores</span><span class="chip">Importação de dados</span><span class="chip">Visão consolidada</span></div>
+    </div>
+    <div class="mapped-media"><img src="banco-horas.png" alt="Controle de banco de horas de colaboradores"></div>
+  </div>
+</section>
+
 <section id="processo">
   <div class="section-tag">Como eu penso</div><h2 class="section-title">Eu não começo pelo código. Começo pelo problema.</h2><p class="section-copy">A tecnologia entra depois que o processo está claro. O objetivo é construir algo que faça sentido para quem realmente vai usar.</p>
   <div class="process-wrap"><div class="step"><div class="step-no">01</div><h4>Entender</h4><p>Mapear o processo, identificar gargalos, dados disponíveis e o que realmente precisa mudar.</p></div><div class="step"><div class="step-no">02</div><h4>Estruturar</h4><p>Transformar regras operacionais em lógica, fluxos, validações e uma experiência clara.</p></div><div class="step"><div class="step-no">03</div><h4>Automatizar</h4><p>Construir a solução conectando dados, interfaces, integrações e regras de negócio.</p></div><div class="step"><div class="step-no">04</div><h4>Evoluir</h4><p>Observar o uso, medir resultados e melhorar continuamente a experiência e os processos.</p></div></div>
@@ -51,7 +69,7 @@
 <footer class="footer" id="contato"><div class="section-tag">Vamos conectar ideias</div><h2>Transformar começa com uma conversa.</h2><div class="cta-row"><a class="btn primary" href="https://www.linkedin.com/in/roberto-lino-6661842a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn" href="https://wa.me/5511980281538" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><div class="footer-row"><span>© 2026 Roberto Lino</span><span>Digital Systems & Automation</span></div></footer>
 
 <script>
-const reveal=document.querySelectorAll('.product-stage,.step,.labs-card,.portrait');
+const reveal=document.querySelectorAll('.product-stage,.mapped-card,.step,.labs-card,.portrait');
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.animate([{opacity:0,transform:'translateY(28px)'},{opacity:1,transform:'translateY(0)'}],{duration:720,easing:'cubic-bezier(.2,.7,.2,1)',fill:'both'});io.unobserve(e.target)}}),{threshold:.12});
 reveal.forEach(x=>io.observe(x));
 window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('progress').style.width=((d.scrollTop/(d.scrollHeight-d.clientHeight))*100)+'%'});
