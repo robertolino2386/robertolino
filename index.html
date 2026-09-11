@@ -44,8 +44,8 @@
 <section class="featured" id="produto">
   <div class="feature-head"><div><div class="section-tag">Fluxo Diário</div><h2 class="section-title">Sua vida financeira em um só lugar.</h2></div><p class="section-copy">Uma experiência criada para organizar receitas, despesas, contas, cartões, vencimentos e decisões financeiras do dia a dia sem complicação.</p></div>
   <div class="product-stage">
-    <div class="product-copy"><div class="product-kicker">Meu Fluxo Diário</div><h3>Controle que acompanha sua rotina.</h3><p>Centralize sua organização financeira em uma interface simples, visual e preparada para o uso diário.</p><p><strong>Utilize agora mesmo grátis por 7 dias.</strong></p><div class="chips"><span class="chip">Fluxo de Caixa</span><span class="chip">Receitas</span><span class="chip">Despesas</span><span class="chip">Contas</span><span class="chip">Cartões</span><span class="chip">Parcelamentos</span><span class="chip">Vencimentos</span><span class="chip">Dashboard</span></div><a class="btn primary" href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer">Acessar Meu Fluxo Diário ↗</a></div>
-    <div class="device-wrap fluxo-visual"><a href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Meu Fluxo Diário"><img src="fluxodiario.png" alt="Meu Fluxo Diário - gestão financeira, fluxo de caixa, contas, cartões, lançamentos e relatórios"></a></div>
+    <div class="product-copy"><div class="product-kicker">Meu Fluxo Diário</div><h3>Controle que acompanha sua rotina.</h3><p>Centralize sua organização financeira em uma interface simples, visual e preparada para o uso diário.</p><p><strong>Utilize agora mesmo grátis por 7 dias.</strong></p><div class="chips"><span class="chip">Fluxo de Caixa</span><span class="chip">Receitas</span><span class="chip">Despesas</span><span class="chip">Contas</span><span class="chip">Cartões</span><span class="chip">Parcelamentos</span><span class="chip">Vencimentos</span><span class="chip">Dashboard</span></div><a class="btn primary" href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer" data-ga-event="fluxo_diario_click" data-ga-location="botao_produto">Acessar Meu Fluxo Diário ↗</a></div>
+    <div class="device-wrap fluxo-visual"><a href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Meu Fluxo Diário" data-ga-event="fluxo_diario_click" data-ga-location="imagem_produto"><img src="fluxodiario.png" alt="Meu Fluxo Diário - gestão financeira, fluxo de caixa, contas, cartões, lançamentos e relatórios"></a></div>
   </div>
 </section>
 
@@ -115,7 +115,7 @@
 
 <section class="labs" id="labs"><div class="section-tag">LABS</div><h2 class="section-title">Ideias que ainda estão ganhando forma.</h2><div class="labs-card"><h3>Projetos, experimentos e novas automações.</h3><p>Processos em sistema ERP Benner, automações, conciliações, controle de estoque, controle de férias e muito mais.</p></div></section>
 
-<footer class="footer" id="contato"><div class="section-tag">Vamos conectar ideias</div><h2>Transformar começa com uma conversa.</h2><div class="cta-row"><a class="btn primary" href="https://www.linkedin.com/in/roberto-lino-6661842a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn" href="https://wa.me/5511980281538" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><div class="footer-row"><span>© 2026 Roberto Lino</span><span>Digital Systems & Automation</span></div></footer>
+<footer class="footer" id="contato"><div class="section-tag">Vamos conectar ideias</div><h2>Transformar começa com uma conversa.</h2><div class="cta-row"><a class="btn primary" href="https://www.linkedin.com/in/roberto-lino-6661842a/" target="_blank" rel="noopener noreferrer" data-ga-event="linkedin_click">LinkedIn ↗</a><a class="btn" href="https://wa.me/5511980281538" target="_blank" rel="noopener noreferrer" data-ga-event="whatsapp_click">WhatsApp ↗</a></div><div class="footer-row"><span>© 2026 Roberto Lino</span><span>Digital Systems & Automation</span></div></footer>
 
 <script>
 const reveal=document.querySelectorAll('.product-stage,.mapped-card,.step,.labs-card,.portrait');
@@ -142,6 +142,41 @@ window.addEventListener('pointermove',e=>{document.body.style.setProperty('--mx'
   close.addEventListener('click',closeBox);
   box.addEventListener('click',e=>{if(e.target===box)closeBox();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))closeBox();});
+})();
+</script>
+
+<script>
+(function(){
+  function sendEvent(name, params){
+    if(typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
+  document.querySelectorAll('[data-ga-event]').forEach(function(el){
+    el.addEventListener('click', function(){
+      sendEvent(el.dataset.gaEvent, {
+        link_text: (el.textContent || el.getAttribute('aria-label') || '').trim(),
+        link_url: el.href || '',
+        location: el.dataset.gaLocation || 'site'
+      });
+    });
+  });
+
+  var processMap = {
+    'banco-horas.png': 'Banco de Horas',
+    'niara.png': 'Conciliação de Transações Niara',
+    'inadimplencia.png': 'Inadimplência',
+    'mapeamento-processos.png': 'Mapeamento de Processos'
+  };
+
+  document.querySelectorAll('.mapped-media img').forEach(function(img){
+    img.addEventListener('click', function(){
+      var src = (img.getAttribute('src') || '').split('/').pop().toLowerCase();
+      sendEvent('processo_interesse', {
+        processo: processMap[src] || img.alt || 'Processo mapeado',
+        interaction_type: 'ampliar_imagem'
+      });
+    });
+  });
 })();
 </script>
 </body>
