@@ -32,11 +32,17 @@
 .hero-signature span{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
 
 
+
+.pdv-section{padding-top:70px;background:linear-gradient(180deg,#05070b,#081320,#05070b)}
+.pdv-card{background:linear-gradient(145deg,#0b1827,#080d15)}
+.pdv-card:before{background:radial-gradient(circle,rgba(56,200,255,.15),transparent 65%)}
+.pdv-image{margin:0;min-width:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0b141d;position:relative;z-index:2}
+.pdv-image img{display:block;width:100%;height:auto}.pdv-image figcaption{padding:14px 18px;color:#aebbc9;font-size:12px}.pdv-placeholder{min-height:280px;display:grid;place-content:center;text-align:center;padding:30px;color:#aebbc9}.pdv-placeholder strong{color:#cba86a;font-size:24px;margin-bottom:8px}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<nav class="nav"><div class="nav-spacer" aria-hidden="true"></div><div class="menu"><a href="#produto">Fluxo Diário</a><a href="#treinamento-excel">Treinamento Excel</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div></nav>
+<nav class="nav"><div class="nav-spacer" aria-hidden="true"></div><div class="menu"><a href="#produto">Fluxo Diário</a><a href="#vendaflow">VendaFlow PDV</a><a href="#agenda-viva">Agenda Viva</a><a href="#indicadores">Indicadores e Relatórios</a><a href="#treinamento-excel">Treinamento Excel</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div></nav>
 
 <section class="hero" id="inicio">
   <div class="hero-grid"></div><div class="hero-glow"></div><div class="hero-ring"></div><div class="hero-ring2"></div>
@@ -51,6 +57,59 @@
   <div class="product-stage">
     <div class="product-copy"><div class="product-kicker">Meu Fluxo Diário</div><h3>Controle que acompanha sua rotina.</h3><p>Centralize sua organização financeira em uma interface simples, visual e preparada para o uso diário.</p><p><strong>Utilize agora mesmo grátis por 7 dias.</strong></p><div class="chips"><span class="chip">Fluxo de Caixa</span><span class="chip">Receitas</span><span class="chip">Despesas</span><span class="chip">Contas</span><span class="chip">Cartões</span><span class="chip">Parcelamentos</span><span class="chip">Vencimentos</span><span class="chip">Dashboard</span></div><a class="btn primary" href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer" data-ga-event="fluxo_diario_click" data-ga-location="botao_produto">Acessar Meu Fluxo Diário ↗</a></div>
     <div class="device-wrap fluxo-visual"><a href="https://meufluxodiario.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Meu Fluxo Diário" data-ga-event="fluxo_diario_click" data-ga-location="imagem_produto"><img src="fluxodiario.png" alt="Meu Fluxo Diário - gestão financeira, fluxo de caixa, contas, cartões, lançamentos e relatórios"></a></div>
+  </div>
+</section>
+
+<section class="pdv-section" id="vendaflow">
+  <div class="feature-head"><div><div class="section-tag">Frente de Loja e Caixa</div><h2 class="section-title">Mais agilidade nas vendas. Mais controle na gestão.</h2></div><p class="section-copy">Uma solução para organizar a operação comercial, do registro dos produtos ao fechamento do caixa.</p></div>
+  <div class="excel-card pdv-card">
+    <div class="excel-copy"><div class="product-kicker">VendaFlow PDV</div><h3>Sua loja em movimento.</h3><p>Um sistema de ponto de venda pensado para simplificar o atendimento, acompanhar resultados e dar à gerência mais visibilidade sobre a operação.</p>
+      <div class="excel-points">
+        <div class="excel-point"><strong>Vendas ágeis</strong>Pesquisa de produtos e leitura de códigos de barras.</div>
+        <div class="excel-point"><strong>Pagamentos flexíveis</strong>PIX, dinheiro, débito e crédito parcelado, inclusive combinados.</div>
+        <div class="excel-point"><strong>Controle de caixa</strong>Abertura e fechamento, com operação de dois caixas simultâneos.</div>
+        <div class="excel-point"><strong>Gestão de acessos</strong>Perfis de operação e autorização de descontos e cancelamentos.</div>
+        <div class="excel-point"><strong>Indicadores de vendas</strong>Desempenho por vendedor, produtos mais vendidos e descontos.</div>
+        <div class="excel-point"><strong>Comprovantes</strong>Comprovante de venda em PDF e compartilhamento por WhatsApp, sem emissão fiscal.</div>
+      </div><a class="btn primary" href="https://wa.me/5511980281538?text=Ol%C3%A1%2C%20Roberto.%20Gostaria%20de%20conhecer%20o%20VendaFlow%20PDV%20e%20solicitar%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" data-ga-event="vendaflow_demo_click" data-ga-location="vendaflow">Solicitar demonstração ↗</a>
+    </div>
+    <figure class="pdv-image"><img src="vendaflow-pdv.png" alt="Tela real do VendaFlow PDV" loading="lazy" onerror="this.parentElement.hidden=true"></figure>
+  </div>
+</section>
+
+<section class="pdv-section" id="agenda-viva">
+  <div class="feature-head"><div><div class="section-tag">Agendamentos Online</div><h2 class="section-title">Seu tempo organizado. Seus clientes mais próximos.</h2></div><p class="section-copy">Uma plataforma para simplificar agendamentos, organizar profissionais e melhorar a experiência dos clientes.</p></div>
+  <div class="excel-card pdv-card">
+    <div class="excel-copy"><div class="product-kicker">Agenda Viva</div><h3>Uma agenda inteligente para o seu negócio.</h3><p>Ideal para salões de beleza, barbearias, estúdios de estética e empresas que trabalham com horários reservados. Conecte gerência, profissionais e clientes em uma única solução.</p>
+      <div class="excel-points">
+        <div class="excel-point"><strong>Agendamento online</strong>Clientes escolhem profissionais, serviços e horários disponíveis.</div>
+        <div class="excel-point"><strong>Gestão de profissionais</strong>Expedientes personalizados e bloqueio de horários indisponíveis.</div>
+        <div class="excel-point"><strong>Múltiplos serviços</strong>Reserva automática do tempo total dos serviços selecionados.</div>
+        <div class="excel-point"><strong>Agenda integrada</strong>Controle de reservas e cancelamentos, evitando conflitos de horários.</div>
+        <div class="excel-point"><strong>Programa de fidelidade</strong>Pontos por atendimento e benefícios configuráveis pela empresa.</div>
+        <div class="excel-point"><strong>Identidade personalizada</strong>Portal próprio para cada empresa, com logotipo e link de agendamento.</div>
+      </div><a class="btn primary" href="https://wa.me/5511980281538?text=Ol%C3%A1%2C%20Roberto.%20Gostaria%20de%20conhecer%20o%20Agenda%20Viva%20e%20solicitar%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" data-ga-event="agenda_viva_demo_click" data-ga-location="agenda_viva">Solicitar demonstração ↗</a>
+    </div>
+    <figure class="pdv-image"><img src="agenda-viva.png" alt="Tela real do Agenda Viva" loading="lazy" onerror="this.parentElement.hidden=true"></figure>
+  </div>
+</section>
+
+<section class="pdv-section" id="indicadores">
+  <div class="feature-head"><div><div class="section-tag">Gestão de Indicadores e Relatórios</div><h2 class="section-title">Transforme dados em decisões inteligentes.</h2></div><p class="section-copy">Uma solução personalizada para centralizar informações, digitalizar controles operacionais, automatizar relatórios e disponibilizar indicadores estratégicos em um ambiente online.</p></div>
+  <div class="excel-card pdv-card">
+    <div class="excel-copy"><div class="product-kicker">Portais e dashboards corporativos</div><h3>Da operação à análise, tudo conectado.</h3><p>Desenvolvemos portais personalizados para empresas de diferentes segmentos, integrando os registros da equipe à visão gerencial e aos relatórios disponibilizados aos clientes.</p>
+      <div class="excel-points">
+        <div class="excel-point"><strong>Dashboards interativos</strong>Indicadores, gráficos e análises gerenciais com filtros por período.</div>
+        <div class="excel-point"><strong>Portal do cliente</strong>Acesso individualizado a relatórios e informações.</div>
+        <div class="excel-point"><strong>Portal da equipe</strong>Gestão de registros e controles operacionais.</div>
+        <div class="excel-point"><strong>Relatórios digitais</strong>Centralização e atualização de informações.</div>
+        <div class="excel-point"><strong>Pesquisas personalizadas</strong>Coleta e análise de respostas.</div>
+        <div class="excel-point"><strong>Gestão de atividades</strong>Cronogramas e acompanhamento de resultados.</div>
+        <div class="excel-point"><strong>Controle de acesso</strong>Informações segmentadas por empresa.</div>
+        <div class="excel-point"><strong>Personalização</strong>Adaptação às necessidades de cada negócio.</div>
+      </div><a class="btn primary" href="https://wa.me/5511980281538?text=Ol%C3%A1%2C%20Roberto.%20Gostaria%20de%20conhecer%20a%20solu%C3%A7%C3%A3o%20de%20Gest%C3%A3o%20de%20Indicadores%20e%20Relat%C3%B3rios%20e%20solicitar%20uma%20demonstra%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" data-ga-event="indicadores_demo_click" data-ga-location="indicadores">Solicitar demonstração ↗</a>
+    </div>
+    <figure class="pdv-image"><img src="indicadores-corporativos.png" alt="Tela anonimizada do portal de indicadores corporativos" loading="lazy" onerror="this.parentElement.hidden=true"></figure>
   </div>
 </section>
 
@@ -102,6 +161,13 @@
 
 
 
+
+<footer class="footer" style="padding:32px 7vw">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <p style="margin:0;color:var(--muted);font-size:14px">Desenvolvido por <strong style="color:var(--gold)">JRML Serviços Administrativos LTDA</strong></p>
+    <a class="btn" href="https://wa.me/5511980281538" target="_blank" rel="noopener noreferrer" data-ga-event="whatsapp_click" data-ga-location="rodape" aria-label="Contato pelo WhatsApp">WhatsApp · (11) 98028-1538 ↗</a>
+  </div>
+</footer>
 
 <script>
 const reveal=document.querySelectorAll('.product-stage,.excel-card,.step,.portrait');
